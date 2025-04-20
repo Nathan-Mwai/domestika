@@ -8,41 +8,41 @@
   <body>
     <canvas width="600" height="600"></canvas>
     <script>
-
       const canvas = document.querySelector("canvas");
 
-      const context = canvas.getContext('2d')
+      const context = canvas.getContext("2d");
 
-      context.fillStyle = 'blue'
+      context.fillStyle = "blue";
       <!-- This are coordinates so 100 left and down to now start drawing -->
       //context.fillRect(100,100,400,400);
 
-      // All this below was done with fillrect so you can see. Here is the full code 
-      context.lineWidth = 4
+      // All this below was done with fillrect so you can see. Here is the full code
+      context.lineWidth = 4;
       context.beginPath();
-      context.rect(100,100,400,400)
-      context.stroke()
+      context.rect(100, 100, 400, 400);
+      //context.stroke()
 
       // it ends here now we do something else
 
       //This is a circle
-      context.beginPath()
-      context.arc(300, 300, 100,0, Math.PI * 2)
-      context.stroke()
+      context.beginPath();
+      context.arc(300, 300, 100, 0, Math.PI * 2);
+      //context.stroke()
 
-      let years = []
+      for (let i = 0; i < 5; i++) {
 
-      let menu = ['starter', 'main', 'desert','drinks', 'sides']
+        
+        let width = 60;
+        let height = 60;
+        let gap = 20
+        let x = 100 + (width + gap) *i
+        let y = 100;
 
-      for (let i = 0; i < 4; i++) {
-        console.log(menu[i])
+
+        context.beginPath();
+        context.rect(x, y,width,height);
+        context.stroke();
       }
-
-      for (let i = 0; i < 10; i++){
-        years.push(2040 + i)
-      }
-
-      console.log(years)
     </script>
   </body>
 </html>
