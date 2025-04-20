@@ -1,7 +1,15 @@
+// Adding Ctrl + S on web create a download on the folder of Output in the sketch directory.
+
+//Settings on how to do the download are done on the const setting
+
+// Check canvas Sketch documentation
+
 const canvasSketch = require("canvas-sketch");
 
 const settings = {
-  dimensions: [600, 600],
+  dimensions: 'A4',
+  pixelsPerInch: 300,
+  orientation: 'landscape'
 };
 
 const sketch = () => {
