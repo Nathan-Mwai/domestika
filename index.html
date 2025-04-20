@@ -6,36 +6,24 @@
     <title>Document</title>
   </head>
   <body>
-    <canvas width="600" height="600"> </canvas>
+    <canvas width="600" height="600"></canvas>
     <script>
-      let year = 2042;
-      let nextYear = year + 1;
 
-      let dinner = "pasta";
+      const canvas = document.querySelector("canvas");
 
-      let sentence = `Tonight, dinner will be ${dinner}`;
+      const context = canvas.getContext('2d')
 
-      function doSomething(params) {
-        console.log(params);
-      }
+      context.fillStyle = 'blue'
+      <!-- This are coordinates so 100 left and down to now start drawing -->
+      //context.fillRect(100,100,400,400);
 
-      doSomething(sentence)
+      // All this below was done with fillrect so you can see. Here is the full code 
+      context.lineWidth = 4
+      context.beginPath();
+      context.rect(100,100,400,400)
+      context.stroke()
 
-      function add(a, b){
-        return a + b
-      }
-
-      let result = add(5,7)
-
-      console.log(result)
-
-      <!-- Arrow Function -->
-      const multiply = (a , b) => {
-        return a * b
-      }
-
-      console.log(multiply(5, 7))
-
+      // it ends here now we do somthing else
     </script>
   </body>
 </html>
