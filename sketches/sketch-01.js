@@ -7,9 +7,7 @@
 const canvasSketch = require("canvas-sketch");
 
 const settings = {
-  dimensions: 'A4',
-  pixelsPerInch: 300,
-  orientation: 'landscape'
+  dimensions: "A4",
 };
 
 const sketch = () => {
@@ -33,8 +31,22 @@ const sketch = () => {
         if (Math.random() > 0.5) {
           context.beginPath();
           context.rect(x + 8, y + 8, w - 16, h - 16);
+        context.strokeStyle = 'blue'
+          context.stroke();
+          
+          context.beginPath();
+          context.arc(x + w / 2, y + h / 2, 10, 0, Math.PI * 2);
+        context.strokeStyle = 'purple'
           context.stroke();
         }
+        context.beginPath();
+        context.arc(x + w / 2, y + h / 2, 19, 0, Math.PI * 2);
+        context.stroke();
+        
+        context.beginPath();
+        context.arc(x + w / 2, y + h / 2, 5, 0, Math.PI * 2);
+        context.strokeStyle = 'red'
+        context.stroke();
       }
     }
   };
