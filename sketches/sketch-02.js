@@ -31,7 +31,7 @@ const sketch = () => {
 
 
     const num = 40
-    const radius = width * 0.3
+    const radius = width * 0.8
 
 
 
@@ -43,20 +43,20 @@ const sketch = () => {
       y = radius * Math.cos(angle)
 
       context.save()
-      context.translate(cx, cy)
+      // context.translate(cx, cy)
       context.translate(x, y)
       context.rotate(-angle)
       context.scale(random.range(0.1,2),random.range(0.2,0.5))
       
       
       context.beginPath();
-      context.rect(-w * 0.5,random.range(0,-h * 0.5), w, h);
+      context.rect(-w * 0.5,random.range(0,-h * 0.9), w, h);
       context.fill()
       context.restore()
       
       context.save()
 
-      context.translate(cx, cy)
+      // context.translate(cx, cy)
       context.rotate(-angle)
 
       context.lineWidth = random.range(5,20)
